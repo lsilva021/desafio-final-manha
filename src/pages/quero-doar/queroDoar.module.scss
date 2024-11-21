@@ -1,0 +1,87 @@
+.principal{
+    font-family: 'Inter';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: clamp(16px, 20px, 24px);
+
+    p{
+        margin-top: 20px;
+    }
+}
+
+
+.cadastro{
+    margin: 35px 0;
+    border: 3px solid #005695;
+    border-radius: 20px;
+    width: 442px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 600px;
+}
+
+.tituloForm{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 356px;
+
+    h2{
+        text-align: end;
+        font-size: 24px;
+        font-weight: 400;
+        color: #005695;
+    }
+}
+
+.formulario{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    input{
+        width: 325px;
+        padding: 10px 20px;
+        border-radius: 15px;
+        border: 2px solid #005695;
+        outline: 0;
+        color: #005695;
+        display: flex;
+
+        &::placeholder{
+            color: rgba(0, 0, 0, 0.863);
+            font-size: 14px;
+        }
+    }
+
+    button{
+        width: 195px;
+        background-color: #005695;
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 10px 0;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+    }
+
+    button:active{
+        color: #005695;
+        background-color: #00579591;
+        transform: translate(2px, 2px);
+    }
+}
+
+@media (max-width: 815px){
+    p{
+        width: 400px;
+        text-align: center;
+    }
+}
