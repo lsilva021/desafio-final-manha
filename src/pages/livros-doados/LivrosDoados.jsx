@@ -1,7 +1,16 @@
 import Livro from "../../assets/livro-Oprotagonista.png"
 import s from "./livrosDoados.module.scss"
+import { useState } from "react"
+import axios from "axios"
 
 export default function LivrosDoados(){
+
+    const [livros, setLivros] = useState([])
+
+    const getLivros = async()=>{
+        const resposta = await axios.get("https://api-livros-ks8u.onrender.com/livros")
+    }
+
     return(
         <main className={s.doados}>
             <h2>Livros Doados</h2>
