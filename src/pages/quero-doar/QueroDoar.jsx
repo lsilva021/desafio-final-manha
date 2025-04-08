@@ -6,8 +6,8 @@ import axios from "axios"
 export default function QueroDoar(){
 
     // Criando os 4 estados que guardarão as informações preenchidas no formulário
-        // armazena     atualiza
-    const [titulo,     setTitulo] = useState ("")
+    // armazena     atualiza
+    const [titulo, setTitulo] = useState ("")
     const [categoria,setCategoria] = useState ("")
     const [autor,setAutor] = useState ("")
     const [image_url, setImage_url] = useState ("")
@@ -28,8 +28,6 @@ export default function QueroDoar(){
 
     const enviarDados = async()=>{
 
-        const endpointApi = "https://api-livros-ks8u.onrender.com/doar"
-
         // criando um objeto (no python = dicionario. no js = objeto)
         const dadosAEnviar = {
             titulo,
@@ -39,7 +37,7 @@ export default function QueroDoar(){
         }
 
         // esperando o axios postar, no endpoint da nossa api, os dados preenchidos
-        await axios.post(endpointApi, dadosAEnviar)
+        await axios.post("https://api-livros-ks8u.onrender.com/doar", dadosAEnviar)
 
     }
 
@@ -55,7 +53,7 @@ export default function QueroDoar(){
 
                 {/* o evento onSubmit significa 'ao enviar' */}
                 {/* o preventDefault impede a página de recarregar ao clicar em algum botão dentro do formulário */}
-                <form action="" className={s.formulario} onSubmit={(e) => e.preventDefault()}>
+                <form className={s.formulario} onSubmit={(e)=>e.preventDefault()}>
                     {/* a cada mudança no input, o onchange chama a função designada. */}
                     <input type="text" placeholder="Título" onChange={capturarTitulo} required/> 
                     <input type="text" placeholder="Categoria" onChange={capturarCategoria} required/>
